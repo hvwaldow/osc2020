@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>A decentralized high-intensity approach to foster data management best-practices and publication of open research data</title>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"> -->
+  <link rel="stylesheet" href="css/reveal.css"/>
+  <link rel="stylesheet" href="css/theme/white.css"/>
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css"/>
+  <!-- Eawag style-sheet -->
+  <link rel="stylesheet" href="css/theme/eawag.css"/>
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+  <!-- <img class="logo" src="assets/logo_eric.svg"/> -->
+  <img class="logo" src="assets/ealogo-blue.svg"/>
+  
+  <!-- Title -->
+  <section data-background="assets/eawag_vorlage_blau_background.png" data-state="title">
+    <div class="full">
+      <div class="maintitle_l1">
+	<span>Fostering<br /><span class="alert">data management</span><br />best-practices<br />& <span class="alert">open research data</span>: </span>
+      </div>
+      <div class="maintitle_l2">
+	A decentralized high-intensity approach
+      </div>
+      <div style="margin-top:600px;">Open Science Conference 2020</div>
+      
+      <!-- <div class="pdfdownload"> -->
+      <!-- 	<a href="pdf/output.pdf"> -->
+      <!-- 	  <img class="titlepageicon" src="assets/pdf.svg" alt="pdf-download" /> -->
+      <!-- 	  <span class="pdfdltext">download<br>PDF (869 kB)</span> -->
+      <!-- 	</a> -->
+      <!-- </div> -->
+      <div class="license">
+      <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
+	<img class="titlepageicon" alt="CC0" src="assets/CC0_button.svg" />
+      </a>
+      </div>
+      
+      <div class="authordate">
+	Harald von Waldow &lt;harald.vonwaldow@eawag.ch&gt; &mdash; 2020-03-11
+      </div>
+    </div>
+  </section>
+
+  <section>
+
+    <div class="rightcolumn">
+      <div style="float:right;width:50%;text-align:center;margin-top:-20px;">
+	<h4><span class="alert">About</span> Eawag</h4>
+      </div>
+      <img class="rawimg" src="assets/eawag_fc.jpg" />
+      <img class="rawimg" src="assets/eawag_kb.jpg" />
+    </div>
+    <div class="leftcolumn">
+      <div style="margin-top:20px;">
+	<div style="font-size:40px;font-weight:bold;margin-bottom:20px">Swiss
+	Federal Institute of<br /><span class="alert">Aquatic Science
+	and Technology</span></div>
+	<ul class="condensed">
+	  <li>two locations:</li>
+	  <ul>
+	    <li>Dübendorf / Zürich</li>
+	    <li>Kastanienbaum / Lucerne</li>
+	  </ul>
+	  <li>~ 320 scientific staff</li>
+	  <li>part of the ETH Domain</li>
+	  <ul>
+	    <li><span class="alert">basic</span>
+	      and <span class="alert">applied</span>
+	      research,</li>
+	    <li><span class="alert">education</span> for specialist
+	      practitioners,</li>
+	    <li>consulting</li>
+	  </ul>
+	</ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div style="float:right;width:50%;text-align:right;margin-top:-20px;">
+	<h4><span class="alert">About</span> Eawag</h4>
+    </div>
+    <div style="margin-bottom:20px">
+    <ul class="condensed">
+      <li><span class="alert">12</span> research departments</li>
+      <li>very <span class="alert">heterogeneous</span> research topics</li>
+      <li><strong>=> heterogeneous data characteristics & use cases</strong></li>
+    </ul>
+    </div>
+    <div style="margin-bottom:20px">
+      <img class="rawimg" src="assets/departments.svg" />
+    </div>
+    <div>
+      <ul class="twocolslist condensed">
+	<li>high resolution mass spectrometry</li>
+	<li>gen-, transcipt-, proteomics</li>
+	<li>sensor networks</li>
+	<li>software</li>
+	<li>hydrogeological data</li>
+	<li>personal data, surveys </li>
+	<li>....</li>
+      </ul>
+  </section>
+    
+  <section>
+    <div style="float:right;width:50%;text-align:right;margin-top:-20px;">
+      <h4><span class="alert">RDM</span> Project at Eawag</h4>
+    </div>
+    <p style="clear:both;">&nbsp;</p>
+    <div>
+      <div class="rightcolumn" style="margin-top:-90px">
+	<div style="position:relative;width:500px;height:1538px;">
+	  <img class="fragment rawimg fade-out" data-fragment-index=0 src="assets/before.svg" style="position:absolute;top:0;left:0;" />
+	  <img class="fragment rawimg" data-fragment-index=0 src="assets/after.svg" style="position:absolute;top:0;left:0;" />
+	</div>
+      </div>
+      <div class="leftcolumn">
+	<ul>
+	  <li><strong>Initial motivation:</strong><br /><blockquote><p>Access to
+	      primary data, ..., has to be ensured after its
+	      acquisition for a sufficient period of time in
+	      accordance with accepted internal and external
+	      regulations,
+	      ...</p><footer style="font-size:smaller;font-style:normal;
+	      font-weight:bold;">-- Research Integrity at
+	      Eawag</footer></blockquote>
+	  </li>
+	  <li class="fragment" data-fragment-index=0 ><strong>=> Initial
+	  focus</strong>:<br />An <mark>internal</mark> <span class="alert">Research
+	      Data Repository</span> solution</li>
+      </ul>
+      </div>
+    </div>
+  </section>
+ 
+  <section>
+    <div style="float:right;width:50%;text-align:right;margin-top:-160px;">
+      <h4><span class="alert">ERIC</span>/internal</h4>
+    </div>
+    <p style="clear:both;">&nbsp;</p>
+    <div style="margin-top:-100px;">
+      <h4>Timeline</h4>
+      <ul>
+	<li><span class="alert">2017</span> &#x21A6; Requirements engineering, experimentation, understanding the code-base</li> 
+	<li>April <span class="alert">2018</span> &#x21A6; "public" beta</li>
+	<li>January <span class="alert">2019</span> &#x21A6; operational as core service</li>
+	<li>January <span class="alert">2019</span> &#x21A6; <strong>Policy:</strong><br /> "<i>Directive on the archiving of research data at Eawag</i>"</li>
+     </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="full">
+      <img src="assets/eric_int_home.png" class="full"/>
+    </div>
+  </section>
+  
+  <section>
+    <div class="full">
+      <img src="assets/eric_int_packages.png" class="full"/>
+    </div>
+  </section>
+  
+  <section>
+    <div style="float:right;width:50%;text-align:right;margin-top:-20px;">
+      <h4>Ad<span class="alert">option</span></h4>
+    </div>
+    <div class="full">
+      <img class="rawimg" src="assets/timeseries1.svg" style="position:absolute;top:40px;left:0;"/>
+      <img class="fragment rawimg" src="assets/timeseries2.svg" style="position:absolute;top:40px;left:0;"/>
+      <img class="rawimg fragment" src="assets/timeseries3.svg" style="position:absolute;top:40px;left:0;"/>
+      <img class="rawimg fragment" src="assets/timeseries4.svg" style="position:absolute;top:40px;left:0;"/>
+    </div>
+  </section>
+  
+  <section>
+    <div style="float:right;width:50%;text-align:right;margin-top:-20px;">
+      <h4><span class="alert">Ad</span>op<span class="alert">tion</span></h4>
+    </div>
+    <div class="full">
+      <img class="rawimg" src="assets/groupsubmissions.svg" />
+    </div>
+  </section>
+
+  <section>
+    <div style="float:right;width:50%;text-align:right;margin-top:-20px;">
+      <h4><span class="alert">Adop</span>ti<span class="alert">on</span></h4>
+    </div>
+    <p style="clear:both"></p>
+      <div class="rightcolumn" style="margin-right:-10px">
+	<div>
+	  <img style="float:right" class="rawimg fragment" data-fragment-index="1" src="assets/envidat1.png" width="400px" />
+	  <img style="float:right" class="rawimg fragment" data-fragment-index="2" src="assets/ETHZ.png" width="400px" />
+	</div>
+	<p style="clear:both">
+	<div style="border:thick double #32a1ce;;margin-top:60px;" class="fragment" data-fragment-index="4">
+	  <p style="text-align:center;font-weight:bold">We are bad.<br />
+	    We are not alone.</p>
+	</div>
+      </div>
+      <div class="leftcolumn" style="font-size:smaller;margin-left:-10px">
+	<table>
+      	  <tr><th>&nbsp;</th><th>2016</th><th>2017</th><th>2018</th><th>2019</th><th style="color:gray;">2020</th></tr>
+      	  <tr><th>Eawag</th><td>0</td><td>0</td><td>79</td><td>138</td><td style="color:lightgray;">14</td></tr>
+      	  <tr class="fragment" data-fragment-index="1"><th>Envidat</th><td>36</td><td>24</td><td>97</td><td>126</td><td style="color:lightgray;">9</td></tr>
+	  <tr class="fragment" data-fragment-index="2"><th>ETH Zürich</th><td>25</td><td>64</td><td>165</td><td>212</td><td style="color:lightgray;">63</td></tr>
+	  <tr class="fragment" data-fragment-index="3"><th>4TU</th><td>347</td><td>476</td><td>457</td><td>975</td><td style="color:lightgray;">134</td></tr>
+	</table>
+	<div style="margin-top:50px">
+	  <img style="vertical-align:top" class="rawimg fragment" data-fragment-index="3" src="assets/4tu_unis.png" />
+	  <img style="vertical-align:top" class="rawimg fragment" data-fragment-index="3" src="assets/4tu_subjects.png">
+	</div>
+      </div>
+  </section>
+
+  <section>
+    <div style="float:right;text-align:center;margin-top:-20px;">
+      <h4><span class="alert">Support</span>/Activities</h4>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="rightcolumn" style="font-size:smaller;margin-top:-30px;">
+      <div class="fragment" data-fragment-index=2 style="text-align:left;">
+	<span class="listtitle"><span class="alert" >Individual</span> Support</span>
+	<ul class="condensed">
+	  <li>Data handling for individual projects</li>
+	  <li>Bulk upload service</li>
+	  <li>Data publishing logistics</li>
+	  <li>Funding acquisition for data publishing</li>
+	  <li>"Scientific IT"<br />(databases, web-applications)</li>
+	</ul>
+      </div>
+      <div class="fragment" data-fragment-index=3 style="text-align:left;">
+	<div><b><span class="listtitle"><span class="alert">Software</span> Tools</span></b></div>
+	<ul class="condensed">
+	  <li><a href="https://github.com/eawag-rdm/xlsxtocsv">xlsxtocsv &#x1f517;</a></li>
+	  <li><a href="https://github.com/eawag-rdm/sav2csv">sav2csv &#x1f517;</a></li>
+	  <li><a href="https://github.com/eawag-rdm/resup">resup &#x1f517;</a></li>
+	  <li>Custom scripts</li>
+	</ul>
+      </div>
+    </div>
+    <div class="leftcolumn" style="font-size:smaller;margin-top:-30px;">
+      <div style="text-align:left;">
+	<b><span class="listtitle"><span class="alert">Guidance</span> material</b></span>
+	<ul class="condensed">
+      	  <li><a href="https://opendata.eawag.ch/dmp/contents.html">DMP Guide &#x1f517;</a></li>
+      	  <li><a href="https://doi.org/10.25678/000066">Eawag publication<br />& archiving guide &#x1f517;</li>
+      	  <li><a href="https://doi.org/10.25678/0001GB">Data Package<br />Review Checklist &#x1f517;</a></li>
+	</ul>
+      </div>
+      <div class="fragment" data-fragment-index=1 style="text-align:left;">
+	<span class="listtitle"><b><span class="alert">Work</span>shops</b></span>
+	<ul class="condensed">
+      	  <li><span class="alert">DMP</span> workshops</li>
+      	  <li><span class="alert">Git</span> workshops</li>
+          <li><span class="alert">Tactical
+              Tech</span> <a href="https://opendata.eawag.ch/eawagrdm/presentations/tactical_tech-2020-01-30/">workshop &#x1f517;</a>
+            (IPython, VMs, Docker, programming basics / tools, useful
+            software, ...)</li>
+	  <li><span class="alert">General</span> RDM workshops</li>
+	</ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div style="float:right;width:50%;text-align:right;margin-top:-40px;">
+      <h4><span>Support: <span class="alert">Point of action</span></span></h4>
+    </div>
+    <div style="text-align:left;">
+      <span class="listtitle" style="border:double steelblue 6px"><span class="alert">Observations</span></span>
+      <div>
+	<ul>
+	  <li><span class="alert">Support</span> for <mark>any
+	      data related tasks</mark> helps for adoption.</li>
+	  <li>Groups and individual researchers need <mark>customized help</mark>.</li>
+	  <li><mark>Individual RDM support</mark> fosters culture-change.</li>
+	</ul>
+      </div>
+      <div>
+	<span class="listtitle" style="border:double steelblue 6px"><span class="alert">Conclusions</span></span>
+	<ul>
+	  <li>Sound data-management practices are a prerequisite for <mark>and start long before</mark> data archiving/publishing.</li>
+	  <li>Intervention <mark>directly where data is produced</mark> seems indispensable to achieve good data-management practices.</li>
+	</ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div style="float:right;width:50%;text-align:center;margin-top:-30px;">
+      <h4><span>Repo <span class="alert">Tech</span></span></h4>
+    </div>
+    <div style="clear:both"></div>
+    <div style="text-align:left;"><span class="listtitle">An <span class="alert">institutional
+	</span>repository is <span class="alert">integrated</span></span></div>
+    <ul class="condensed">
+      <li>authorization system (LDAP)</li>
+      <li class="fragment" data-fragment-index=2>organizational structure</li>
+      <li class="fragment" data-fragment-index=4>projects</li>
+      <li class="fragment" data-fragment-index=6>personal roles & info (ActiveDirecory),<br /> e.g. ORCID (under construction)</li>
+      <li class="fragment" data-fragment-index=8>customization of ingest-forms</li>
+      <li class="fragment" data-fragment-index=12>integration with institutional publication repository</li>
+      <li class="fragment" data-fragment-index=12>customized programmatic interaction</li>
+      <li class="fragment" data-fragment-index=12> ....... </li>
+    </ul>
+    <div class="fragment fade-in-then-out full" data-fragment-index=1>
+      <img src="assets/eric_login.png" class="full">
+    </div>
+    <div class="full">
+      <img class="fragment fade-in-then-out full" data-fragment-index=3 src="assets/eric_orgas.png"/>
+    </div>
+    <div class="full">
+      <img class="fragment fade-in-then-out full" data-fragment-index=5 src="assets/eric_int_projects.png"/>
+    </div>
+    <div class="full">
+      <img class="fragment fade-in-then-out full" data-fragment-index=7 src="assets/eric_int_orga.png"/>
+    </div>
+    <div class="full">
+      <img class="fragment fade-in-then-out full" data-fragment-index=9 src="assets/eric_int_create1.png"/>
+    </div>
+    <div class="full">
+      <img class="fragment fade-in-then-out full" data-fragment-index=10 src="assets/eric_int_create2.png"/>
+    </div>
+    <div class="full">
+      <img class="fragment fade-in-then-out full" data-fragment-index=11 src="assets/eric_int_create3.png"/>
+    </div>
+  </section>
+
+  <section>
+    <div style="float:right;width:50%;text-align:right;margin-top:-100px;">
+      <h4><span>Repo <span class="alert">Tech</span></span></h4>
+    </div>
+    <div style="clear:both"></div>
+    <div>
+      <ul>
+	<li><img class="rawimg preimgfloat" src="assets/ckan-logo.png"
+		 style="vertical-align:middle;"/> The world’s leading <br />
+	  <a href="https://ckan.org">Open Source data portal platform &#x1f517;</a></li>
+	<li><img src="assets/techstack.png" class="rawimg preimgfloat"
+		 style="vertical-align:middle;"/> Written in
+	  Python. Standard building blocks</li>
+	<li>Very large <span class="alert">number of deployments</span> worldwide</li>
+	<li class="fragment fade-in-then-out full" data-fragment-index=1>Extensible through <span class="alert">plugin-architecture</span></li>
+	<li class="fragment fade-in-then-out full" data-fragment-index=1>Very powerful <span class="alert">API</span></li>
+	<li class="fragment fade-in-then-out full" data-fragment-index=1>Excellent <span class="alert">documentation</span></li>
+	<li class="fragment fade-in-then-out full" data-fragment-index=1>Competent & helpful <span class="alert">core team & community</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div style="text-align:left;">
+	<p><mark><span class="alert">Perceived effort</span> for data
+	preparation is a <span class="alert">main barrier</span> for
+	    archiving & publishing [1,2,3].</mark></p>
+	<div class="fragment"> 
+	  <p><span class="listtitle">What helps:</span><br />
+	  <ul><li>Technical <span class="alert">infrastructure close to</span> the users.<br />
+	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp; extensive <span class="alert">RDM support close to</span> the researchers.</li></ul></p>
+	</div>
+	<div class="fragment">
+	  <p><span class="listtitle">A major incentive:</span><br />
+	    <ul><li>The wish to publish <span class="alert">Open Research Data</span></li></ul></p>
+	</div>
+    </div>
+    <div style="font-size:18px;text-align:left;">
+      [1] Michener, W. K. (2015). <i>Ecological data
+      sharing</i>. Ecological
+      Informatics. <a href="https://doi.org/10.1016/j.ecoinf.2015.06.010">doi:10.1016/j.ecoinf.2015.06.010</a>
+      <br />
+      [2] Kim, Y. (2017). <i>Fostering scientists’ data sharing
+	behaviors via data repositories, journal supplements, and personal
+	communication methods</i>. Information Processing &amp;
+      Management. <a href="https://doi.org/10.1016/j.ipm.2017.03.003">doi:10.1016/j.ipm.2017.03.003</a>
+      <br />
+      [3] von der Heyde, M. (2019). <i>Open Research Data: Landscape and cost analysis of data
+	repositories currently used by the Swiss research community, and requirements for the future</i>
+      [Report to the SNSF]. <a href="https://doi.org/10.5281/zenodo.2643460">doi:10.5281/zenodo.2643460</a>
+    </div>
+  </section>
+
+  <section>
+    <div style="float:right;margin-right:50px;text-align:center;margin-top:-30px;">
+      <h4><span class="alert">ERIC</span>/open</h4>
+    </div>
+    <div style="clear:both;"></div>
+    <div>
+      <span class="listtitle">Since November 1, 2019:</span> <a href="https://opendata.eawag.ch">https://opendata.eawag.ch &#x1f517;</a>
+      <ul style="margin-top:30px;">
+	<li class="fragment" data-fragment-index=1>Same system. But completely <span class="alert">independent.</span><br />(Webapp, SOLR, Postgres, Storage)</li>
+	<li class="fragment" data-fragment-index=1>No ingress, <span class="alert">no users.</span></li>
+	<li class="fragment" data-fragment-index=1>Completely <span class="alert">dockerized.</span></li>
+	<li class="fragment" data-fragment-index=3>In the process of being populated (~80 packages backlog).</li>
+	<li class="fragment" data-fragment-index=3><span class="alert">Every</span> package has a <span class="alert"><mark>DOI</mark></span> (DataCite).</li>
+      </ul>
+    </div>
+
+    <div class="full fragment fade-in-then-out" data-fragment-index=2 class="full fragment" style="margin-top:0px;margin-right:-50px">
+      <img class="full" src="assets/architecture2.svg"/>
+    </div>
+   </section>
+
+  <section>
+    <div style="float:right;text-align:center;margin-right:55px;margin-top:-20px;">
+      <h4><span class="alert">Meta</span>Data</h4>
+    </div>
+    <div style="clear:both"></div>
+    <div>
+      <b>DOIs primary function:</b> <span class="alert">Persistent Identifier</span><br />
+      but
+    </div>
+      <div class="rightcolumn">
+	<img class="rawimg" style="margin-top:150px" src="assets/datacite.svg">
+      </div>
+      <div class="leftcolumn" style="text-align:left">
+      <p><span class="listtitle">DataCite also serves as:</span></p>
+      <ul>
+	<li><span class="alert">Citation</span> formatter</li>
+	<li>Metadata <span class="alert">schema supplier</span></li>
+	<li><span class="alert">Database</span> with REST-API for DOIs</li>
+	<li><mark>Metadata distributor</mark></li>
+      </ul>
+      </div>
+      <div class="full fragment fade-in-then-out">
+	<img class="full" src="assets/datacite_search.png" />
+      </div>
+      <div class="full fragment fade-in-then-out">
+	<img class="full" src="assets/google_search.png" />
+      </div>
+      <div class="full fragment fade-in-then-out">
+	<img class="full" src="assets/base_search.png" />
+      </div>
+  </section>
+
+  <section>
+    <div style="float:right;text-align:center;margin-right:55px;margin-top:-20px;">
+      <h4><span class="alert">Vis</span>ion</h4>
+    </div>
+    <div style="clear:both"></div>
+    <div class="full" style="margin-top:60px">
+      <img src="assets/vision1.svg" class="rawimg" />
+    </div>
+  </section>
+
+  <section>
+    <div style="float:right;text-align:center;margin-right:55px;margin-top:-20px;">
+      <h4><span class="alert">Vis</span>ion</h4>
+    </div>
+    <div style="clear:both"></div>
+    <div class="full" style="margin-top:30px">
+      <img src="assets/vision.svg" class="rawimg" />
+    </div>
+  </section>
+
+  
+  <!-- <section> -->
+  <!--   <p>VISION -->
+  <!--   <ul> -->
+  <!--     <li>Lots of institutional repositories, integration &amp; support => doable</li> -->
+  <!--     <li>Basic <span class="alert">i</span>nteroperability: Metadata standards, open, documented &amp; capable APIs => doable</li> -->
+  <!--     <li>Hub that harvest these repositories, sort, present, distribute, make <span class="alert">f</span>indable = exist (e.g. B2Find)</li> -->
+  <!--   </ul></p> -->
+  <!--   <p>UNSOLVED PROBLEM -->
+  <!--   <ul> -->
+  <!--     <li>Quality control &amp; curation</li> -->
+  <!--   </ul> -->
+  <!--   </p>	 -->
+  <!-- </section> -->
+
+  <section>
+    <div class="full" style="background:white;">
+      <h1><span class="alert">Q</span>uestions?</h1>
+      <br />
+      <img class="rawimg" width="50%" src="assets/cartoon.png" />
+    </div>
+  </section>
+  
+  </div>
+</div>
+
+
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Vertical centering of slides
+        center: true,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Transition style
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1024,
+        height: 768,
+        //width: 1090,
+        //height:1200,
+        // Factor of the display size that should remain empty around the content
+        margin: 0.03,
+        zoomKey: 'shift',
+        slideNumber: true,
+        hash: true,
+            	<!-- multiplex: { -->
+		<!-- // Example values. To generate your own, see the socket.io server instructions. -->
+		<!-- secret: null, // null so the clients do not have control of the master presentation -->
+		<!-- id: 'a8babd03bffcd64c', // id, obtained from socket.io server -->
+		<!-- url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh' // Location of socket.io server -->
+		<!-- }, -->
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+      	  <!-- { src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true }, -->
+	  <!-- { src: 'plugin/multiplex/client.js', async: true } -->
+        ]
+      });
+    </script>
+  </body>
+</html>
